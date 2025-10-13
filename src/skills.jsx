@@ -159,7 +159,7 @@ const Skills = () => {
                 onClick={() => setActiveSkill(null)}
                 className="absolute top-3 right-3 text-gray-400 hover:text-white"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5 cursor-pointer" />
               </button>
 
               <h3 className="text-xl font-semibold text-indigo-300 mb-3">

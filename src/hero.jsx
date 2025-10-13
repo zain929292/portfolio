@@ -48,8 +48,8 @@ const Hero = () => {
 
         {/* 🔄 Rotating text */}
         <p className="mt-4 text-lg text-gray-200 font-bold">
-          Full Stack Developer skilled in{" "}
-          <span className={`${colors[colorIndex]} transition-all duration-700`}>
+          <span className="block sm:inline">Full Stack Developer skilled in </span>{" "}
+          <span className={`${colors[colorIndex]} transition-all duration-700 inline-block`}>
             {titles[titleIndex]}
           </span>
         </p>
