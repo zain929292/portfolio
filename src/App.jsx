@@ -8,14 +8,14 @@ import * as THREE from "three";
 import Footer from "./footer";
 import Header from "./header";
 import Skills from "./skills";
-import Languages from "./languages";
-import Certificates from "./certifications";
+import Languages  from "./languages";
 
 const App = () => {
+
   const [vantaEffect, setVantaEffect] = useState(null);
   const vantaRef = useRef(null);
 
-
+  // 🌊 Attach Vanta to the entire page
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
@@ -28,12 +28,14 @@ const App = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
+
           shininess: 150.0,
           waveHeight: 10.5,
           waveSpeed: 0.5,
           zoom: 0.85,
+        //   color: 0x2e2e2e,
           color: 0x111827,
-          backgroundColor: 0x2e2e2e,
+          backgroundColor: 0x2e2e2e // black
         })
       );
     }
@@ -44,11 +46,10 @@ const App = () => {
 
   return (
     <div 
-      ref={vantaRef}
-      className="text-white  min-h-screen"
-    >
+    ref={vantaRef} 
+    className="text-white">
       {/* Navbar */}
-      <Header />
+      < Header />
 
       {/* Hero */}
       <Hero />
@@ -59,9 +60,6 @@ const App = () => {
       {/* Skills */}
       <Skills />
       
-      {/* Certifications */}
-      <Certificates />
-
       {/* Languages */}
       <Languages />
 

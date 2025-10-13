@@ -4,50 +4,100 @@ import { createPortal } from "react-dom";
 
 const skills = [
   {
-    name: "Banking Fundamentals",
-    image: "https://cdn-icons-png.flaticon.com/512/263/263115.png", // colored bank icon
-    description: `• Understanding of core banking principles including deposits, loans, and interest rates
-• Knowledge of financial instruments such as bonds, equities, and derivatives
-• Familiarity with banking operations, regulatory compliance, and risk management`,
+    name: "React",
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+    description: `I have strong expertise in React.js, including:
+- Component-based architecture
+- Hooks (useState, useEffect, useContext)
+- State management patterns
+- Optimizing performance with memoization
+- Responsive UI with Tailwind CSS`,
   },
   {
-    name: "Analytical Skills",
-    image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // colored analytics icon
-    description: `• Proficiency in data analysis, financial modeling, and reporting
-• Ability to interpret complex datasets to support decision-making
-• Strong problem-solving skills, identifying trends and anomalies efficiently`,
+    name: "React Native",
+    image: "https://reactnative.dev/img/header_logo.svg",
+    description: `Hands-on experience in React Native for mobile app development:
+- Cross-platform apps (iOS & Android)
+- Navigation and routing
+- API integration with Axios/Fetch
+- State management with Context API
+- Styling with Tailwind & custom components`,
   },
   {
-    name: "Software Proficiency",
-    image: "https://cdn-icons-png.flaticon.com/512/1055/1055687.png", // colored software icon
-    description: `• Advanced proficiency in MS Office Suite (Excel, Word, PowerPoint)
-• Basic knowledge of financial software such as Tally, QuickBooks, or other ERP systems
-• Comfortable with spreadsheet modeling, charting, and database management`,
+    name: "Laravel",
+    image: "https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg",
+    description: `Laravel backend experience:
+- REST APIs
+- Middleware & authentication
+- Role-based access
+- Eloquent ORM
+- Blade templates`,
   },
   {
-    name: "Communication Skills",
-    image: "https://cdn-icons-png.flaticon.com/512/2942/2942660.png", // colored chat icon
-    description: `• Strong written and verbal communication, including professional emails and reports
-• Effective presentation and public speaking skills
-• Ability to collaborate with clients, colleagues, and stakeholders efficiently`,
+    name: "Yii2 (PHP)",
+    image: "https://avatars.githubusercontent.com/u/993323?s=200&v=4",
+    description: `Yii2 framework experience:
+- MVC architecture
+- ActiveRecord ORM
+- User authentication & RBAC
+- RESTful APIs
+- CRUD generators`,
   },
   {
-    name: "Quantitative Tools",
-    image: "https://cdn-icons-png.flaticon.com/512/1680/1680559.png", // colorful stats icon
-    description: `• Experienced in statistical software (e.g., STATA, SPSS, R) for data analysis
-• Ability to perform regression analysis, hypothesis testing, and forecasting
-• Strong quantitative and numerical problem-solving skills`,
+    name: "Tailwind CSS",
+    image:
+      "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+    description: `Tailwind CSS for modern UI:
+- Utility-first CSS
+- Responsive design
+- Dark mode
+- Custom configurations
+- Component-based styling`,
   },
   {
-    name: "Research",
-    image: "https://cdn-icons-png.flaticon.com/512/2917/2917993.png", // colorful research icon
-    description: `• Skilled in conducting literature reviews, surveys, and data collection
-• Competent in analyzing policies, market trends, and financial reports
-• Ability to synthesize complex information into actionable insights`,
+    name: "Bootstrap 5",
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+    description: `Bootstrap 5 expertise:
+- Responsive grid layouts
+- Utility classes
+- Tabs, tables, modals
+- Theming with SCSS
+- Cross-browser support`,
+  },
+  {
+    name: "JavaScript (ES6+)",
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    description: `JavaScript ES6+ experience:
+- Modern syntax (let, const, arrow functions)
+- Promises & async/await
+- Array & object methods
+- DOM manipulation
+- Event handling`,
+  },
+  {
+    name: "Git",
+    image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+    description: `Git version control:
+- Branching & merging
+- Pull requests
+- GitHub/GitLab workflows
+- Conflict resolution
+- Version history`,
+  },
+  {
+    name: "SQL",
+    image: "https://www.svgrepo.com/show/303251/mysql-logo.svg",
+    description: `Database expertise:
+- Writing complex queries
+- Joins & subqueries
+- Normalization
+- Indexing for performance
+- Integration with ORMs`,
   },
 ];
-
-
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(null);
@@ -58,19 +108,20 @@ const Skills = () => {
       className="py-10 px-4 m-4 bg-gray-900 rounded-lg relative z-10 scroll-mt-10"
     >
       <h2 className="text-3xl font-bold text-center mb-10 text-indigo-400">
-        SKILLS
+        Skills
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="hover:scale-105 bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-indigo-500/50 transition-shadow duration-500"
+            className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-indigo-500/50 transition-shadow duration-500 hover:scale-102"
           >
             <h3 className="text-lg font-semibold mb-2 text-indigo-300">
               {skill.name}
             </h3>
 
+            {/* Single Image */}
             <div className="h-36 w-full mb-3 flex items-center justify-center bg-white rounded-md overflow-hidden">
               <img
                 src={skill.image}
@@ -79,12 +130,13 @@ const Skills = () => {
               />
             </div>
 
+            {/* Short description */}
             <p className="text-gray-300 text-sm">
-              {skill.description.slice(0, 60)}...
+              {skill.description.slice(0, 80)}...
             </p>
             <button
               onClick={() => setActiveSkill(skill)}
-              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm cursor-pointer "
+              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm cursor-pointer"
             >
               Read More
             </button>
@@ -92,6 +144,7 @@ const Skills = () => {
         ))}
       </div>
 
+      {/* Modal */}
       {activeSkill &&
         createPortal(
           <div
@@ -106,7 +159,7 @@ const Skills = () => {
                 onClick={() => setActiveSkill(null)}
                 className="absolute top-3 right-3 text-gray-400 hover:text-white"
               >
-                <X className="w-5 h-5 cursor-pointer" />
+                <X className="w-5 h-5" />
               </button>
 
               <h3 className="text-xl font-semibold text-indigo-300 mb-3">

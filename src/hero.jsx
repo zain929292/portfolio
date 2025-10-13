@@ -3,10 +3,9 @@ import React, { useEffect, useState } from "react";
 const Hero = () => {
   // ✨ Rotating job titles
   const titles = [
-    "Banking Fundamentals", "Analytical Skills", "Software Proficiency", "Communication Skills", "Quantitative Tools",
-    "Research",
+    "React Js", "React Native", "Php", "Laravel", "Yii2",
+    "JavaScript", "Tailwind", "Bootstrap"
   ];
-  const [titleIndex, setTitleIndex] = useState(0);
 
   // ✨ Rotating colors for name
   const colors = [
@@ -23,6 +22,7 @@ const Hero = () => {
     "text-amber-300",     // subtle amber
     "text-cyan-300"       // soft cyan
   ];
+  const [titleIndex, setTitleIndex] = useState(0);
   const [colorIndex, setColorIndex] = useState(0);
 
   useEffect(() => {
@@ -42,23 +42,17 @@ const Hero = () => {
         <h1 className="text-5xl font-bold text-white">
           Hi, I’m{" "}
           <span className={`${colors[colorIndex]} transition-all duration-700`}>
-            Arwa
+            Zain
           </span>
         </h1>
 
         {/* 🔄 Rotating text */}
-      {/* Mobile: stacked, Desktop: inline */}
-<p className="mt-4 text-xl sm:text-2xl text-gray-300 font-medium text-center">
-  <span className="block sm:inline">Specializing in</span>{" "}
-  <span
-    className={`${colors[colorIndex]} font-semibold transition-colors duration-700 inline-block`}
-  >
-    {titles[titleIndex]}
-  </span>
-</p>
-
-
-
+        <p className="mt-4 text-lg text-gray-200 font-bold">
+          Full Stack Developer skilled in{" "}
+          <span className={`${colors[colorIndex]} transition-all duration-700`}>
+            {titles[titleIndex]}
+          </span>
+        </p>
 
         {/* 🎯 Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
@@ -71,7 +65,7 @@ const Hero = () => {
 
           {/* 📄 Download CV Button */}
           <a
-            href="/Arwa_CV.pdf"
+            href="/Muhammad_Zain_Ul_Abden_CV.pdf"
             download
             className="px-6 py-3 bg-gray-100 text-indigo-700 font-medium rounded-lg shadow hover:bg-gray-200"
           >

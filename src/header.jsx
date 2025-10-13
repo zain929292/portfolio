@@ -28,7 +28,7 @@ const Header = () => {
             inline-block pb-1
           "
         >
-        AM
+        MZ
         </h1>
 
       {/* Logo */}
@@ -49,10 +49,6 @@ const Header = () => {
         </a>
         <a href="#skills" className="hover:text-indigo-400 transition-colors">
           Skills
-        </a>
-        
-        <a href="#certificates" className="hover:text-indigo-400 transition-colors">
-          Certificates
         </a>
         <a href="#languages" className="hover:text-indigo-400 transition-colors">
           Languages
@@ -104,7 +100,7 @@ const Header = () => {
             Home
           </a>
           <a
-            href="#project"
+            href="#projects"
             className="w-full text-center py-4 border-b border-gray-700 hover:text-indigo-400 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
@@ -116,13 +112,6 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
           >
             Skills
-          </a>
-          <a
-            href="#certificates"
-            className="w-full text-center py-4 border-b border-gray-700 hover:text-indigo-400 transition-colors"
-            onClick={() => setMenuOpen(false)}
-          >
-            Certificates
           </a>
           <a
             href="#languages"
