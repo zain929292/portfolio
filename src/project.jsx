@@ -100,7 +100,7 @@ const Project = () => {
             </p>
             <button
               onClick={() => setActiveProject(project)}
-              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm sm:text-base"
+              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm sm:text-base cursor-pointer"
             >
               Read More
             </button>
