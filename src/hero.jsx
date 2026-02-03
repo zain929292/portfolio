@@ -41,9 +41,16 @@ const Hero = () => {
       <div className="relative z-10 px-6">
         <h1 className="text-5xl font-bold text-white">
           Hi, I’m{" "}
-          <span className={`
-            text-7xl transition-all duration-700`}>
-            Zain
+            <span className="
+                bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400
+                bg-clip-text text-transparent
+                transition-transform duration-700
+                hover:scale-110
+                text-7xl
+                inline-block
+                drop-shadow-lg
+              ">
+                Zain
           </span>
         </h1>
 
