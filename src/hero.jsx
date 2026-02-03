@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Hero = () => {
   // ✨ Rotating job titles
   const titles = [
-    "React Js", "React Native", "Php", "Laravel", "Yii2",
+     "Next Js", "React Js", "React Native", "Php", "Laravel",
     "JavaScript", "Tailwind", "Bootstrap"
   ];
 
@@ -41,7 +41,8 @@ const Hero = () => {
       <div className="relative z-10 px-6">
         <h1 className="text-5xl font-bold text-white">
           Hi, I’m{" "}
-          <span className={`${colors[colorIndex]} transition-all duration-700`}>
+          <span className={`
+            text-7xl transition-all duration-700`}>
             Zain
           </span>
         </h1>
@@ -49,7 +50,7 @@ const Hero = () => {
         {/* 🔄 Rotating text */}
         <p className="mt-4 text-lg text-gray-200 font-bold">
           <span className="block sm:inline">Full Stack Developer skilled in </span>{" "}
-          <span className={`${colors[colorIndex]} transition-all duration-700 inline-block`}>
+          <span className={`${colors[colorIndex]} text-3xl transition-all duration-700 inline-block`}>
             {titles[titleIndex]}
           </span>
         </p>

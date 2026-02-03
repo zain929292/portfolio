@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
 import { createPortal } from "react-dom";
-
 const skills = [
   {
-    name: "React",
+  name: "Next.js",
+  image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+  description: `Next.js framework experience:
+- Server-Side Rendering (SSR)
+- Static Site Generation (SSG)
+- App Router & Pages Router
+- Dynamic routing
+- API routes
+- Performance optimization & SEO
+- Image optimization
+- Tailwind CSS integration`,
+},
+
+  {
+    name: "React.js",
     image:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
     description: `I have strong expertise in React.js, including:
@@ -14,16 +27,7 @@ const skills = [
 - Optimizing performance with memoization
 - Responsive UI with Tailwind CSS`,
   },
-  {
-    name: "React Native",
-    image: "https://reactnative.dev/img/header_logo.svg",
-    description: `Hands-on experience in React Native for mobile app development:
-- Cross-platform apps (iOS & Android)
-- Navigation and routing
-- API integration with Axios/Fetch
-- State management with Context API
-- Styling with Tailwind & custom components`,
-  },
+
   {
     name: "Laravel",
     image: "https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg",
@@ -35,14 +39,14 @@ const skills = [
 - Blade templates`,
   },
   {
-    name: "Yii2 (PHP)",
-    image: "https://avatars.githubusercontent.com/u/993323?s=200&v=4",
-    description: `Yii2 framework experience:
-- MVC architecture
-- ActiveRecord ORM
-- User authentication & RBAC
-- RESTful APIs
-- CRUD generators`,
+    name: "React Native",
+    image: "https://reactnative.dev/img/header_logo.svg",
+    description: `Hands-on experience in React Native for mobile app development:
+- Cross-platform apps (iOS & Android)
+- Navigation and routing
+- API integration with Axios/Fetch
+- State management with Context API
+- Styling with Tailwind & custom components`,
   },
   {
     name: "Tailwind CSS",
@@ -88,7 +92,7 @@ const skills = [
 - Version history`,
   },
   {
-    name: "SQL",
+    name: "MySQL",
     image: "https://www.svgrepo.com/show/303251/mysql-logo.svg",
     description: `Database expertise:
 - Writing complex queries
@@ -105,38 +109,39 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-10 px-4 m-4 bg-gray-900 rounded-lg relative z-10 scroll-mt-10"
+      className="py-10 px-2 sm:px-6 m-2 sm:m-6 bg-gray-900 rounded-lg relative z-10 scroll-mt-10"
     >
       <h2 className="text-3xl font-bold text-center mb-10 text-indigo-400">
         Skills
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-indigo-500/50 transition-shadow duration-500 hover:scale-102"
+            className="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-indigo-500/50 transition-shadow duration-500 hover:scale-102"
           >
-            <h3 className="text-lg font-semibold mb-2 text-indigo-300">
+            <h3 className="text-lg font-semibold mb-2 text-indigo-300 truncate">
               {skill.name}
             </h3>
 
-            {/* Single Image */}
-            <div className="h-36 w-full mb-3 flex items-center justify-center bg-white rounded-md overflow-hidden">
+            {/* Image */}
+            <div className="h-24 sm:h-36 w-full mb-3 flex items-center justify-center bg-white rounded-md overflow-hidden">
               <img
                 src={skill.image}
                 alt={skill.name}
-                className="h-28 object-contain"
+                className="h-20 sm:h-28 object-contain"
               />
             </div>
 
             {/* Short description */}
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm sm:text-base">
               {skill.description.slice(0, 80)}...
             </p>
+
             <button
               onClick={() => setActiveSkill(skill)}
-              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm cursor-pointer"
+              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm sm:text-base cursor-pointer"
             >
               Read More
             </button>
@@ -152,20 +157,20 @@ const Skills = () => {
             onClick={() => setActiveSkill(null)}
           >
             <div
-              className="bg-gray-800 max-w-lg w-full rounded-lg p-5 relative shadow-lg overflow-y-auto max-h-[75vh]"
+              className="bg-gray-800 max-w-lg sm:max-w-xl w-full rounded-lg p-5 sm:p-6 relative shadow-lg overflow-y-auto max-h-[75vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setActiveSkill(null)}
                 className="absolute top-3 right-3 text-gray-400 hover:text-white"
               >
-                <X className="w-5 h-5 cursor-pointer" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6 cursor-pointer" />
               </button>
 
-              <h3 className="text-xl font-semibold text-indigo-300 mb-3">
+              <h3 className="text-xl sm:text-2xl font-semibold text-indigo-300 mb-3">
                 {activeSkill.name}
               </h3>
-              <p className="text-gray-300 whitespace-pre-line text-sm leading-relaxed">
+              <p className="text-gray-300 whitespace-pre-line text-sm sm:text-base leading-relaxed">
                 {activeSkill.description}
               </p>
             </div>

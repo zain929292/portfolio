@@ -3,8 +3,21 @@ import { X } from "lucide-react";
 import { createPortal } from "react-dom";
 
 const projects = [
+    {
+    title: "Hub Al Souq (Next.js)",
+    images: ["/assets/hub1.png", "/assets/hub2.png", "/assets/hub3.png", "/assets/hub4.png"],
+    description: `Hub Al Souq is an e-commerce marketplace website developed using Next.js and Tailwind CSS.
+
+My work included:
+- Product listing & dynamic routing
+- Store and vendor integration
+- API integration for products & stores
+- Responsive UI/UX design
+- Performance optimization with Next.js
+- Reusable components & clean architecture`,
+  },
   {
-    title: "J Dent Lite",
+    title: "J Dent Lite (React.js)",
     images: ["/assets/jdent1.png", "/assets/jdent2.png", "/assets/jdent3.png"],
     description: `J Dent Lite is a dental clinic management web application where I contributed to the frontend development using React and Tailwind CSS.
 
@@ -16,8 +29,9 @@ My work included:
 - Dark mode
 - Accessibility improvements`,
   },
+
   {
-    title: "Building Management System",
+    title: "Building Management System (Laravel)",
     images: ["/assets/building1.png", "/assets/building2.png", "/assets/building3.png"],
     description: `The Building Management System is a property and tenant management web application developed with React and Bootstrap 5.
 
@@ -29,7 +43,23 @@ My work included:
 - Mobile compatibility
 - Accessibility standards`,
   },
+
+
+//   {
+//     title: "Paradox",
+//     images: ["/assets/paradox1.png", "/assets/paradox2.png", "/assets/paradox3.png"],
+//     description: `Paradox is a modern web platform where I worked on frontend features and UI implementation.
+
+// My work included:
+// - Responsive layouts with React & Tailwind
+// - Component-based architecture
+// - API integration
+// - Form handling & validations
+// - Performance and UI improvements
+// - Cross-browser compatibility`,
+//   },
 ];
+
 
 const Project = () => {
   const [currentIndexes, setCurrentIndexes] = useState(projects.map(() => 0));
@@ -100,7 +130,7 @@ const Project = () => {
             </p>
             <button
               onClick={() => setActiveProject(project)}
-              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm sm:text-base"
+              className="text-indigo-400 hover:text-indigo-300 mt-2 text-sm sm:text-base cursor-pointer"
             >
               Read More
             </button>
