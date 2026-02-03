@@ -3,105 +3,52 @@ import { X } from "lucide-react";
 import { createPortal } from "react-dom";
 const skills = [
   {
-  name: "Next.js",
-  image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
-  description: `Next.js framework experience:
-- Server-Side Rendering (SSR)
-- Static Site Generation (SSG)
-- App Router & Pages Router
-- Dynamic routing
-- API routes
-- Performance optimization & SEO
-- Image optimization
-- Tailwind CSS integration`,
-},
-
+    name: "Next.js",
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+    description: `I have extensive experience working with Next.js, building high-performance and SEO-friendly web applications. I am skilled in server-side rendering (SSR), static site generation (SSG), and dynamic routing, as well as setting up App Router and Pages Router. I can create custom API routes, optimize images, improve performance, and integrate Tailwind CSS to build responsive and modern UIs. I also focus on accessibility and maintainable code structures.`
+  },
   {
     name: "React.js",
-    image:
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-    description: `I have strong expertise in React.js, including:
-- Component-based architecture
-- Hooks (useState, useEffect, useContext)
-- State management patterns
-- Optimizing performance with memoization
-- Responsive UI with Tailwind CSS`,
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+    description: `I am highly proficient in React.js, using component-based architecture to build scalable and maintainable web apps. I work with React Hooks such as useState, useEffect, and useContext to manage state effectively. I have experience with state management patterns, performance optimization with memoization, and creating responsive UIs with Tailwind CSS. I emphasize writing clean, reusable components and enhancing user experience through modern React practices.`
   },
-
   {
     name: "Laravel",
     image: "https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg",
-    description: `Laravel backend experience:
-- REST APIs
-- Middleware & authentication
-- Role-based access
-- Eloquent ORM
-- Blade templates`,
+    description: `I have solid experience with Laravel for backend development, building RESTful APIs, handling middleware, and implementing authentication systems. I am familiar with role-based access control (RBAC), working with Eloquent ORM for database management, and creating dynamic web applications using Blade templates. My approach ensures secure, efficient, and maintainable code, and I am comfortable integrating Laravel with frontend frameworks like React.`
   },
   {
     name: "React Native",
     image: "https://reactnative.dev/img/header_logo.svg",
-    description: `Hands-on experience in React Native for mobile app development:
-- Cross-platform apps (iOS & Android)
-- Navigation and routing
-- API integration with Axios/Fetch
-- State management with Context API
-- Styling with Tailwind & custom components`,
+    description: `I develop cross-platform mobile applications using React Native, targeting both iOS and Android devices. I work on navigation, routing, and API integration using Axios or Fetch. I implement state management using Context API and optimize app performance. I also focus on responsive designs, clean UI/UX, and using Tailwind CSS or custom components to deliver visually appealing and user-friendly mobile experiences.`
   },
   {
     name: "Tailwind CSS",
-    image:
-      "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-    description: `Tailwind CSS for modern UI:
-- Utility-first CSS
-- Responsive design
-- Dark mode
-- Custom configurations
-- Component-based styling`,
+    image: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+    description: `I am proficient in Tailwind CSS, creating modern, utility-first designs that are responsive and customizable. I implement dark mode, manage custom configurations, and develop reusable components for consistent design patterns. Tailwind allows me to rapidly prototype designs while maintaining a clean and maintainable codebase, ensuring that web applications look professional on all devices and screen sizes.`
   },
   {
     name: "Bootstrap 5",
-    image:
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
-    description: `Bootstrap 5 expertise:
-- Responsive grid layouts
-- Utility classes
-- Tabs, tables, modals
-- Theming with SCSS
-- Cross-browser support`,
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+    description: `I have experience using Bootstrap 5 to build responsive layouts and UI components. I work with grid systems, utility classes, modals, tabs, tables, and other prebuilt components. I also integrate SCSS for custom theming, ensuring that websites have a consistent look and feel. My knowledge ensures cross-browser compatibility, fast prototyping, and seamless integration with JavaScript and backend frameworks.`
   },
   {
     name: "JavaScript (ES6+)",
-    image:
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-    description: `JavaScript ES6+ experience:
-- Modern syntax (let, const, arrow functions)
-- Promises & async/await
-- Array & object methods
-- DOM manipulation
-- Event handling`,
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    description: `I am proficient in modern JavaScript (ES6+), including let/const, arrow functions, template literals, destructuring, and modules. I work with promises, async/await, array and object methods, DOM manipulation, and event handling. My experience includes writing clean, maintainable code and optimizing scripts for performance, ensuring that web applications are both fast and interactive across all devices.`
   },
   {
     name: "Git",
     image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
-    description: `Git version control:
-- Branching & merging
-- Pull requests
-- GitHub/GitLab workflows
-- Conflict resolution
-- Version history`,
+    description: `I am experienced with Git version control, managing code repositories, branching, merging, and resolving conflicts. I regularly use pull requests and workflows on GitHub or GitLab. My knowledge ensures smooth collaboration in team environments, maintains version history, and enables efficient project management. I focus on clear commit messages and organized repository structures.`
   },
   {
     name: "MySQL",
     image: "https://www.svgrepo.com/show/303251/mysql-logo.svg",
-    description: `Database expertise:
-- Writing complex queries
-- Joins & subqueries
-- Normalization
-- Indexing for performance
-- Integration with ORMs`,
-  },
+    description: `I have strong database skills with MySQL, including writing complex queries, joins, and subqueries. I focus on normalization, indexing for performance, and integrating databases with ORMs. I can design schemas, optimize queries, and manage relational data effectively. My experience ensures that applications can efficiently store, retrieve, and manipulate data while maintaining data integrity and scalability.`
+  }
 ];
+
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(null);
