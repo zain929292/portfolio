@@ -136,7 +136,7 @@ const Skills = () => {
 
             {/* Short description */}
             <p className="text-gray-300 text-sm sm:text-base">
-              {skill.description.slice(0, 80)}...
+              {skill.description.slice(0, 60)}...
             </p>
 
             <button
