@@ -135,9 +135,15 @@ const Skills = () => {
             </div>
 
             {/* Short description */}
-            <p className="text-gray-300 text-sm sm:text-base">
-              {skill.description.slice(0, 60)}...
-            </p>
+<p className="text-gray-300 text-sm">
+  <span className="hidden sm:inline">
+    {skill.description.slice(0, 80)}...
+  </span>
+  <span className="inline sm:hidden">
+    {skill.description.slice(0, 20)}...
+  </span>
+</p>
+
 
             <button
               onClick={() => setActiveSkill(skill)}
