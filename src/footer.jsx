@@ -40,7 +40,7 @@ const Footer = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/muhammad-zain-ul-abden"
+          href="https://www.linkedin.com/in/m-zain-/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-indigo-400 transition-colors"
@@ -51,10 +51,10 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="w-full text-center text-sm text-gray-400 pb-3 bg-gray-900">
+      <p className="text-gray-400 text-xs sm:text-sm">
         © {new Date().getFullYear()} Zain. All rights reserved.
-      </div>
-    </div>
+      </p>
+    </footer>
   );
 };
 
